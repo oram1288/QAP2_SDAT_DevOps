@@ -1,11 +1,11 @@
 package com.keyin.domain.members;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.keyin.domain.tournaments.Tournament;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -17,21 +17,28 @@ public class Member {
     private String address;
     private String email;
     private String phoneNumber;
+    private String membershipType;
     private Date membershipStartDate;
     private String membershipDuration;
+    private Tournament tournamentName;
+
+    @ManyToMany
+    private List<Tournament> tournament = new ArrayList<>();
 
     public Member () {
 
     }
 
-    public Member(Long memberId, String memberName, String address, String email, String phoneNumber, Date membershipStartDate, String membershipDuration) {
+    public Member(Long memberId, String memberName, String address, String email, String phoneNumber, String membershipType, Date membershipStartDate, String membershipDuration, Tournament tournamentName) {
         this.memberId = memberId;
         this.memberName = memberName;
         this.address = address;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.membershipType = membershipType;
         this.membershipStartDate = membershipStartDate;
         this.membershipDuration = membershipDuration;
+        this.tournamentName = tournamentName;
     }
 
     public Long getMemberId() {
@@ -74,6 +81,14 @@ public class Member {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getMembershipType() {
+        return membershipType;
+    }
+
+    public void setMembershipType(String membershipType) {
+        this.membershipType = membershipType;
+    }
+
     public Date getMembershipStartDate() {
         return membershipStartDate;
     }
@@ -88,5 +103,21 @@ public class Member {
 
     public void setMembershipDuration(String membershipDuration) {
         this.membershipDuration = membershipDuration;
+    }
+
+    public List<Tournament> getTournament() {
+        return tournament;
+    }
+
+    public void setTournament(List<Tournament> tournament) {
+        this.tournament = tournament;
+    }
+
+    public Tournament getTournamentName() {
+        return tournamentName;
+    }
+
+    public void setTournamentName(Tournament tournamentName) {
+        this.tournamentName = tournamentName;
     }
 }
