@@ -13,6 +13,7 @@ public class Tournament {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tournamentId;
 
+    private String tournamentName;
     private Date startDate;
     private Date endDate;
     private String location;
@@ -26,8 +27,9 @@ public class Tournament {
 
     }
 
-    public Tournament(Long tournamentId, Date startDate, Date endDate, String location, String entryFee, String cashPrizeAmount, List<Member> members) {
+    public Tournament(Long tournamentId, String tournamentName, Date startDate, Date endDate, String location, String entryFee, String cashPrizeAmount, List<Member> members) {
         this.tournamentId = tournamentId;
+        this.tournamentName = tournamentName;
         this.startDate = startDate;
         this.endDate = endDate;
         this.location = location;
@@ -42,6 +44,14 @@ public class Tournament {
 
     public void setTournamentId(Long tournamentId) {
         this.tournamentId = tournamentId;
+    }
+
+    public String getTournamentName() {
+        return tournamentName;
+    }
+
+    public void setTournamentName(String tournamentName) {
+        this.tournamentName = tournamentName;
     }
 
     public Date getStartDate() {
