@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3d38fcd-8434-4f08-b40b-2f0942746bc7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentService.java" afterDir="false" />
     </list>
@@ -31,7 +32,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.RestServiceApplication.executor": "Run",
+    "Application.RestServiceApplication.executor": "Debug",
     "Maven.QAP2_SDAT_DevOps [clean].executor": "Run",
     "Maven.QAP2_SDAT_DevOps [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",

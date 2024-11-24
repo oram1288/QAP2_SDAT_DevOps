@@ -20,10 +20,9 @@ public class Member {
     private String membershipType;
     private Date membershipStartDate;
     private String membershipDuration;
-    private Tournament tournamentName;
 
-    @ManyToMany
-    private List<Tournament> tournament = new ArrayList<>();
+    @ManyToOne
+    private Tournament tournamentName;
 
     public Member () {
 
@@ -105,13 +104,13 @@ public class Member {
         this.membershipDuration = membershipDuration;
     }
 
-    public List<Tournament> getTournament() {
-        return tournament;
-    }
-
-    public void setTournament(List<Tournament> tournament) {
-        this.tournament = tournament;
-    }
+//    public List<Tournament> getTournament() {
+//        return tournament;
+//    }
+//
+//    public void setTournament(List<Tournament> tournament) {
+//        this.tournament = tournament;
+//    }
 
     public Tournament getTournamentName() {
         return tournamentName;

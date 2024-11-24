@@ -32,15 +32,15 @@ public class TournamentService {
     }
 
     public Tournament findByTournyName(String tournamentName) {
-        return tournamentRepository.findByTournyName(tournamentName);
+        return tournamentRepository.findByTournamentName(tournamentName);
     }
 
     public Optional<Tournament> getTournamentByLocation(String location) {
-        return tournamentRepository.findByTournyLocation(location);
+        return tournamentRepository.findByLocation(location);
     }
 
     public Optional<Tournament> getTournamentByStartDate(Date startDate) {
-        return tournamentRepository.findByTournyStartDate(startDate);
+        return tournamentRepository.findByStartDate(startDate);
     }
 
     public List<Member> getMembersByTournament(Long tournamentId) {

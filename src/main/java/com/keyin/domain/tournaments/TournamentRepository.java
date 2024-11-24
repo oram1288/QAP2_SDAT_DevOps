@@ -1,6 +1,5 @@
 package com.keyin.domain.tournaments;
 
-import com.keyin.domain.members.Member;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,9 +9,9 @@ import java.util.Optional;
 @Repository
 public interface TournamentRepository extends CrudRepository<Tournament, Long>  {
 
-    public Tournament findByTournyName(String tournamentName);
+    public Tournament findByTournamentName(String tournamentName);
 
-    Optional<Tournament> findByTournyStartDate(Date startDate);
+    Optional<Tournament> findByStartDate(Date startDate);
 
-    Optional<Tournament> findByTournyLocation(String location);
+    Optional<Tournament> findByLocation(String location);
 }

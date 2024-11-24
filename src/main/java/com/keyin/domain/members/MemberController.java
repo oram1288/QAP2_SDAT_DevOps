@@ -57,7 +57,7 @@ public class MemberController {
     }
 
     @GetMapping("/getMemberByMembership/{membershipType}")
-    public ResponseEntity<Member> getMemberByMembership(@PathVariable String membershipType) {
+    public ResponseEntity<Member> getMemberByMembershipType(@PathVariable String membershipType) {
         Optional<Member> member = memberService.getMemberByMembership(membershipType);
         return member.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
@@ -68,12 +68,12 @@ public class MemberController {
         return member.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/getMemberByTournyId/{tournamentId}")
-    public ResponseEntity<Iterable<Member>> getMemberByTournyId(@PathVariable Long tournamentId) {
-        Iterable<Member> members = memberService.getMemberByTournyId(tournamentId);
-        if (members.iterator().hasNext()) {
-            return ResponseEntity.ok(members);
-        }
-        return ResponseEntity.notFound().build();
-    }
+//    @GetMapping("/getMemberByTournyId/{tournamentId}")
+//    public ResponseEntity<Iterable<Member>> getMemberByTournyId(@PathVariable Long tournamentId) {
+//        Iterable<Member> members = memberService.getMemberByTournyId(tournamentId);
+//        if (members.iterator().hasNext()) {
+//            return ResponseEntity.ok(members);
+//        }
+//        return ResponseEntity.notFound().build();
+//    }
 }
