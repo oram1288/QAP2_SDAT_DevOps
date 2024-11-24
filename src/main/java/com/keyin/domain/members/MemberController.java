@@ -22,7 +22,7 @@ public class MemberController {
     @PostMapping("/addNewMember")
     public Member addNewMember(@RequestBody Member member) {
 
-        Optional<Tournament> tournamentOptional = Optional.ofNullable(tournamentService.findByTournamentName(member.getTournamentName().getTournamentName()));
+        Optional<Tournament> tournamentOptional = Optional.ofNullable(tournamentService.findByTournyName(member.getTournamentName().getTournamentName()));
 
         Tournament tournament;
         if (tournamentOptional.isPresent()) {
@@ -68,9 +68,9 @@ public class MemberController {
         return member.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/getMemberByTournyStartDate/{startDate}")
-    public ResponseEntity<Iterable<Member>> getMemberByTournyStartDate(@PathVariable Date startDate) {
-        Iterable<Member> members = memberService.getMemberByTournyStartDate(startDate);
+    @GetMapping("/getMemberByTournyId/{tournamentId}")
+    public ResponseEntity<Iterable<Member>> getMemberByTournyId(@PathVariable Long tournamentId) {
+        Iterable<Member> members = memberService.getMemberByTournyId(tournamentId);
         if (members.iterator().hasNext()) {
             return ResponseEntity.ok(members);
         }

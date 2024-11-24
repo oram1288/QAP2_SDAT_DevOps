@@ -41,9 +41,9 @@ public class MemberService {
         return memberRepository.findMemberByPhoneNumber(phoneNumber);
     }
 
-    public Iterable<Member> getMemberByTournyStartDate(Date startDate) {
-        if (tournamentRepository.existsByStartDate(startDate)) {
-            return memberRepository.findMemberByTournyStartDate(startDate);
+    public Iterable<Member> getMemberByTournyId(Long tournamentId) {
+        if (tournamentRepository.existsById(tournamentId)) {
+            return memberRepository.findMemberByTournyID(tournamentId);
         }
         return List.of();
     }
