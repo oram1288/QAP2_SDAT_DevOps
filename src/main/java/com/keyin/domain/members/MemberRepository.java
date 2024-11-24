@@ -3,8 +3,6 @@ package com.keyin.domain.members;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Date;
-import java.util.Iterator;
 import java.util.Optional;
 
 @Repository
@@ -15,5 +13,5 @@ public interface MemberRepository extends CrudRepository<Member, Long> {
 
     Optional<Member> findMemberByPhoneNumber(String phoneNumber);
 
-    Iterable<Member> findMemberByTournyStartDate(Date startDate);
+    Iterable<Member> findMemberByTournyID(Long tournamentId);
 }
