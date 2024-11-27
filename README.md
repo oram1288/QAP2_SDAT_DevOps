@@ -13,6 +13,7 @@ Search members by:
 - Name
 - Membership type
 - Phone number
+- List all members by a tournaments start date
 
 Tournament Management
 - Add a new tournament
