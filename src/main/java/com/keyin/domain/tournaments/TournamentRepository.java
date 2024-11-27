@@ -11,7 +11,9 @@ public interface TournamentRepository extends CrudRepository<Tournament, Long>  
 
     public Tournament findByTournamentName(String tournamentName);
 
-    Optional<Tournament> findByStartDate(Date startDate);
+    Optional<Tournament> findByTournamentId(Long tournamentId);
+
+    Optional<Tournament> findByStartDate(String startDate);
 
     Optional<Tournament> findByLocation(String location);
 }

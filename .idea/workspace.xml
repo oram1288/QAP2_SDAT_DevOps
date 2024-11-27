@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3d38fcd-8434-4f08-b40b-2f0942746bc7" name="Changes" comment="">
+    <list default="true" id="d3d38fcd-8434-4f08-b40b-2f0942746bc7" name="Changes" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/members/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/Tournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/tournaments/TournamentService.java" afterDir="false" />
     </list>
@@ -21,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;oram1288&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/oram1288/QAP2_SDAT_DevOps.git&quot;,
+    &quot;accountId&quot;: &quot;79b73629-f525-4441-be62-01774c7f65e0&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -35,11 +51,20 @@
     "Application.RestServiceApplication.executor": "Debug",
     "Maven.QAP2_SDAT_DevOps [clean].executor": "Run",
     "Maven.QAP2_SDAT_DevOps [install].executor": "Run",
+    "Maven.QAP2_SDAT_DevOps [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/keyinstudent/DevOps/QAP2_SDAT_DevOps",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="RestServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.keyin.RestServiceApplication" />
@@ -69,6 +94,19 @@
       <option name="presentableId" value="Default" />
       <updated>1732149730246</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1732416780916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732416780916</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
