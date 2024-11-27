@@ -7,6 +7,7 @@ Member Management
 - Add a new member
 - Retrieve all member details
 - Delete a member
+
 Search members by:
 - Id
 - Name
@@ -17,6 +18,7 @@ Tournament Management
 - Add a new tournament
 - Retrieve all tournament details
 - Delete a tournament
+
 Search tournaments by:
 - Id
 - Start date
