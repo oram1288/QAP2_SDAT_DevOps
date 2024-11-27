@@ -4,6 +4,7 @@ import com.keyin.domain.tournaments.TournamentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -39,10 +40,16 @@ public class MemberService {
         return memberRepository.findMemberByPhoneNumber(phoneNumber);
     }
 
-//    public Iterable<Member> getMemberByTournyId(Long tournamentId) {
-//        if (tournamentRepository.existsById(tournamentId)) {
-//            return memberRepository.findMemberByTournyName(tournamentId);
-//        }
-//        return List.of();
+    public boolean deleteMember(Long memberId) {
+        if (memberRepository.existsById(memberId)) {
+            memberRepository.deleteById(memberId);
+        } else {
+            throw new RuntimeException("City not found with id " + memberId);
+        }
+        return false;
+    }
+
+//    public List<Member> getMemberByTournamentStartDate(String startDate) {
+//        return memberRepository.findMemberByTournamentStartDate(startDate);
 //    }
 }

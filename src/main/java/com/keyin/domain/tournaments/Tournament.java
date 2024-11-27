@@ -14,8 +14,8 @@ public class Tournament {
     private Long tournamentId;
 
     private String tournamentName;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
     private String location;
     private String entryFee;
     private String cashPrizeAmount;
@@ -27,7 +27,7 @@ public class Tournament {
 
     }
 
-    public Tournament(Long tournamentId, String tournamentName, Date startDate, Date endDate, String location, String entryFee, String cashPrizeAmount, List<Member> members) {
+    public Tournament(Long tournamentId, String tournamentName, String startDate, String endDate, String location, String entryFee, String cashPrizeAmount, List<Member> members) {
         this.tournamentId = tournamentId;
         this.tournamentName = tournamentName;
         this.startDate = startDate;
@@ -54,19 +54,19 @@ public class Tournament {
         this.tournamentName = tournamentName;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

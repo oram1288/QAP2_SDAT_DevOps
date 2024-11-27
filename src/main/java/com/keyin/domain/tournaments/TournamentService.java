@@ -28,24 +28,39 @@ public class TournamentService {
     }
 
     public Optional<Tournament> getTournamentById(Long tournamentId) {
-        return tournamentRepository.findById(tournamentId);
+        return tournamentRepository.findByTournamentId(tournamentId);
     }
 
-    public Tournament findByTournyName(String tournamentName) {
+    public Optional<Tournament> findByTournamentId(Long tournamentId) {
+        return tournamentRepository.findByTournamentId(tournamentId);
+
+    }
+
+    public Tournament findByTournamentName(String tournamentName) {
         return tournamentRepository.findByTournamentName(tournamentName);
+
     }
 
     public Optional<Tournament> getTournamentByLocation(String location) {
         return tournamentRepository.findByLocation(location);
     }
 
-    public Optional<Tournament> getTournamentByStartDate(Date startDate) {
+    public Optional<Tournament> getTournamentByStartDate(String startDate) {
         return tournamentRepository.findByStartDate(startDate);
     }
 
-    public List<Member> getMembersByTournament(Long tournamentId) {
-        return tournamentRepository.findById(tournamentId)
-                .map(Tournament::getMembers)
-                .orElse(Collections.emptyList());
+    public boolean deleteTournament(Long tournamentId) {
+        if (tournamentRepository.existsById(tournamentId)) {
+            tournamentRepository.deleteById(tournamentId);
+        } else {
+            throw new RuntimeException("City not found with id " + tournamentId);
+        }
+        return false;
     }
+
+//    public List<Member> getMembersByTournament(Long tournamentId) {
+//        return tournamentRepository.findById(tournamentId)
+//                .map(Tournament::getMember)
+//                .orElse(Collections.emptyList());
+//    }
 }

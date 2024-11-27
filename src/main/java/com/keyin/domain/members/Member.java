@@ -3,7 +3,6 @@ package com.keyin.domain.members;
 import com.keyin.domain.tournaments.Tournament;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,17 +17,17 @@ public class Member {
     private String email;
     private String phoneNumber;
     private String membershipType;
-    private Date membershipStartDate;
+    private String membershipStartDate;
     private String membershipDuration;
 
-    @ManyToOne
-    private Tournament tournamentName;
+    @OneToMany
+    private List <Tournament> tournaments;
 
     public Member () {
 
     }
 
-    public Member(Long memberId, String memberName, String address, String email, String phoneNumber, String membershipType, Date membershipStartDate, String membershipDuration, Tournament tournamentName) {
+    public Member(Long memberId, String memberName, String address, String email, String phoneNumber, String membershipType, String membershipStartDate, String membershipDuration, List <Tournament> tournaments) {
         this.memberId = memberId;
         this.memberName = memberName;
         this.address = address;
@@ -37,7 +36,7 @@ public class Member {
         this.membershipType = membershipType;
         this.membershipStartDate = membershipStartDate;
         this.membershipDuration = membershipDuration;
-        this.tournamentName = tournamentName;
+        this.tournaments = tournaments;
     }
 
     public Long getMemberId() {
@@ -88,11 +87,11 @@ public class Member {
         this.membershipType = membershipType;
     }
 
-    public Date getMembershipStartDate() {
+    public String getMembershipStartDate() {
         return membershipStartDate;
     }
 
-    public void setMembershipStartDate(Date membershipStartDate) {
+    public void setMembershipStartDate(String membershipStartDate) {
         this.membershipStartDate = membershipStartDate;
     }
 
@@ -104,19 +103,11 @@ public class Member {
         this.membershipDuration = membershipDuration;
     }
 
-//    public List<Tournament> getTournament() {
-//        return tournament;
-//    }
-//
-//    public void setTournament(List<Tournament> tournament) {
-//        this.tournament = tournament;
-//    }
-
-    public Tournament getTournamentName() {
-        return tournamentName;
+    public List<Tournament> getTournaments() {
+        return tournaments;
     }
 
-    public void setTournamentName(Tournament tournamentName) {
-        this.tournamentName = tournamentName;
+    public void setTournaments(List<Tournament> tournaments) {
+        this.tournaments = tournaments;
     }
 }
