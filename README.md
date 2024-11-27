@@ -35,7 +35,9 @@ Set up Enivornment
 - Create your docker-compose.yml file and configure the image name for your api, your MySQL database name, and your password.
 
 Build and Run Docker Containers
+
 Step 1: Build the Docker Images:
 - docker build -t golf-club-api .
+
 Step 2: Run the Docker Containers:
 - docker compose up
