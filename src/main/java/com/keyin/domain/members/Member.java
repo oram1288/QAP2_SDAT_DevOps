@@ -20,7 +20,7 @@ public class Member {
     private String membershipStartDate;
     private String membershipDuration;
 
-    @OneToMany
+    @ManyToMany
     private List <Tournament> tournaments;
 
     public Member () {

@@ -10,9 +10,11 @@ import java.util.Optional;
 public interface MemberRepository extends CrudRepository<Member, Long> {
     Optional<Member> findMemberByMemberName(String memberName);
 
-    Optional<Member> findMemberByMembershipType(String membershipType);
+    Optional<List<Member>> findMemberByMembershipType(String membershipType);
 
     Optional<Member> findMemberByPhoneNumber(String phoneNumber);
 
-//    List<Member> findMemberByTournamentStartDate(String startDate);
+    Optional<List<Member>> findMemberByTournaments_StartDate(String startDate);
+
+    Optional<List<Member>> findMemberByTournaments_TournamentName(String tournamentName);
 }

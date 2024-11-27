@@ -58,8 +58,8 @@ public class TournamentService {
         return false;
     }
 
-//    public List<Member> getMembersByTournament(Long tournamentId) {
-//        return tournamentRepository.findById(tournamentId)
+//    public List<Member> getMembersByTournamentName(String tournamentName) {
+//        return tournamentRepository.(tournamentName)
 //                .map(Tournament::getMember)
 //                .orElse(Collections.emptyList());
 //    }

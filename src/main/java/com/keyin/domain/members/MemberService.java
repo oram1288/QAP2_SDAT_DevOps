@@ -32,7 +32,7 @@ public class MemberService {
         return memberRepository.findMemberByMemberName(memberName);
     }
 
-    public Optional<Member> getMemberByMembership(String membershipType) {
+    public Optional<List<Member>> getMemberByMembership(String membershipType) {
         return memberRepository.findMemberByMembershipType(membershipType);
     }
 
@@ -49,7 +49,12 @@ public class MemberService {
         return false;
     }
 
-//    public List<Member> getMemberByTournamentStartDate(String startDate) {
-//        return memberRepository.findMemberByTournamentStartDate(startDate);
-//    }
+    public Optional<List<Member>> getMemberByTournamentName(String tournamentName) {
+        return memberRepository.findMemberByTournaments_TournamentName(tournamentName);
+    }
+
+    public Optional<List<Member>> getMemberByTournamentStartDate(String startDate) {
+        return memberRepository.findMemberByTournaments_StartDate(startDate);
+    }
+
 }
