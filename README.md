@@ -1,4 +1,5 @@
 Golf Club Tournament and Membership Management API
+
 This project API is for managing golf club members and tournaments. It provides endpoints for adding and retrieving members and tournaments, adding members to tournaments, and performing advanced searches. The application is built using Spring Boot and integrates with a MySQL. Docker support is included for easy setup and deployment.
 
 Features:
